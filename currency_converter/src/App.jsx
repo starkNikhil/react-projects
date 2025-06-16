@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import './App.css'
-import InputBox from './components'
+import {InputBox} from './Components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 function App() {
   
@@ -45,7 +45,7 @@ const convert =()=>{setConvertedAmount(amount*currencyInfo[to])}
                                 onCurrencyChange = {(currency)=>setAmount(amount)}
                                 selectCurrency = {from}
                                 onAmountChange = {(amount)=>setAmount(amount)}
-                                
+                                 
                             />
                         </div>
                         <div className="relative w-full h-0.5">
