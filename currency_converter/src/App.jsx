@@ -24,12 +24,10 @@ const convert =()=>{setConvertedAmount(amount*currencyInfo[to])}
    return (
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-            style={{
-                backgroundImage: `url('https://images.pexels.com/photos/26797335/pexels-photo-26797335.jpeg')`,
-            }}
+            
         >
             <div className="w-full">
-                <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+                <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 float-left">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -37,6 +35,7 @@ const convert =()=>{setConvertedAmount(amount*currencyInfo[to])}
                            
                         }}
                     >
+                        
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
@@ -63,7 +62,7 @@ const convert =()=>{setConvertedAmount(amount*currencyInfo[to])}
                                 amount ={convertedAmount}
                                 currencyOptions = {options}
                                 onCurrencyChange = {(currency)=>setTo(amount)}
-                                selectCurrency = {from}
+                                selectCurrency = {to}
                                 amountDisable
                                 
                             />
@@ -72,6 +71,13 @@ const convert =()=>{setConvertedAmount(amount*currencyInfo[to])}
                             Convert {from.toUpperCase()} to {to.toUpperCase()}
                         </button>
                     </form>
+                </div>
+                <div className='w-m h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat'
+                style={{
+                backgroundImage: `url('https://images.pexels.com/photos/26797335/pexels-photo-26797335.jpeg')`,
+            }}
+                >
+
                 </div>
             </div>
         </div>
